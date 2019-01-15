@@ -1,0 +1,6 @@
+A note on ICD9-HCC mapping
+
+The ICD9 code suffixes were removed (anything after the ".") and de-duped; when a ICD9 parent code was mapped to
+multiple conditions, we filtered to the condition having the most matches, allowing for ties.  One should be able 
+to merge this dataset against the "diag_1", "diag_2", and "diag_3" fields in the admissions dataset (excluding 
+anything after the "." for the ~7% of codes that have it).
